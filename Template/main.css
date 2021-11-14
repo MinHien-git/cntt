@@ -8,7 +8,6 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow: none;
 }
 
 :root {
@@ -180,7 +179,6 @@ li {
     body {
         background: url(./bgm.png) no-repeat center center fixed;
         background-size: cover;
-        overflow-y: scroll;
     }
 }
 
@@ -244,5 +242,17 @@ li {
     }
     .grid-container--home>*:last-child {
         grid-column: 3;
+    }
+}
+
+main {
+    overflow-y: scroll;
+}
+
+@media screen and (max-width :780px) {
+    body,
+    html {
+        overflow: hidden;
+        max-width: 100%;
     }
 }
