@@ -229,6 +229,12 @@ li {
     opacity: 1;
 }
 
+.main-about--,
+.grid-container--home,
+.main-team-- {
+    overflow-y: scroll;
+}
+
 @media (min-width: 45em) {
     .grid-container {
         text-align: left;
