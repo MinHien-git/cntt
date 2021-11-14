@@ -176,7 +176,7 @@ li {
     border-radius: 0.5rem;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 10em) {
     body {
         background: url(./bgm.png) no-repeat center center fixed;
         background-size: cover;
