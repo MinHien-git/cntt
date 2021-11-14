@@ -4,12 +4,11 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    overflow: none;
     line-height: 1.5;
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow: hidden;
+    overflow: none;
 }
 
 :root {
@@ -181,6 +180,7 @@ li {
     body {
         background: url(./bgm.png) no-repeat center center fixed;
         background-size: cover;
+        overflow-y: scroll;
     }
 }
 
@@ -227,12 +227,6 @@ li {
 .large-button:focus::after {
     transform: scale(1.5);
     opacity: 1;
-}
-
-.main-about--,
-.grid-container--home,
-.main-team-- {
-    overflow-y: auto;
 }
 
 @media (min-width: 45em) {
