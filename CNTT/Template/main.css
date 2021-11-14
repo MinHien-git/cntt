@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    overflow: none;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow: hidden;
+}
+
+:root {
+    --clr-white: 0 0% 100%;
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+    color: hsl(var(--clr-dark));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(59, 59, 59, 50%);
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-link {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.about li {
+    margin: 1rem;
+}
+
+@media screen and (max-width :1024px) {
+    .nav-link {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width :780px) {
+    body {
+        overflow: hidden;
+    }
+    .nav-link {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        width: 100%;
+        top: 8vh;
+        background-color: #3B3B3B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in
+    }
+    .nav-link li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+    z-index: 1000;
+}
+
+
+/*animation*/
+
+@keyframes navLink {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/* Utility Classes */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.card {
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in;
+}
+
+.main-team-- {
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+    place-content: center;
+}
+
+.main-team-->* {
+    background-color: white;
+    height: clamp(8rem, 10vh + 1rem, 14rem);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 10em) {
+    body {
+        background: url(./bgm.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 45em) {
+    body {
+        background: url(./bg.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 3rem;
+}
+
+.large-button {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    padding: 2em 2em;
+    border-radius: 50%;
+    text-decoration: none;
+    aspect-ratio: 1;
+    place-items: center;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    background: hsl(var(--clr-white)/.15);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 500ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: 2rem;
+        grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0, 40rem)) minmax(1em, 1fr);
+    }
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+    .grid-container--home>*:first-child {
+        grid-column: 2;
+    }
+    .grid-container--home>*:last-child {
+        grid-column: 3;
+    }
+}
