@@ -98,8 +98,9 @@ li {
 }
 
 @media screen and (max-width :780px) {
-    body {
-        overflow: hidden;
+    body,
+    html {
+        overflow-x: hidden;
     }
     .nav-link {
         position: absolute;
@@ -242,17 +243,5 @@ li {
     }
     .grid-container--home>*:last-child {
         grid-column: 3;
-    }
-}
-
-main {
-    overflow-y: scroll;
-}
-
-@media screen and (max-width :780px) {
-    body,
-    html {
-        overflow: hidden;
-        max-width: 100%;
     }
 }
