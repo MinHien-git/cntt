@@ -37,6 +37,7 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: rgb(59, 59, 59, 50%);
+    z-index: 10;
 }
 
 .logo {
@@ -124,6 +125,7 @@ li {
 
 .nav-active {
     transform: translateX(0%);
+    z-index: 1000;
 }
 
 
@@ -174,7 +176,7 @@ li {
     border-radius: 0.5rem;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 30em) {
     body {
         background: url(./bgm.png) no-repeat center center fixed;
         background-size: cover;
