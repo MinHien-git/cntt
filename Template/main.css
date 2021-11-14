@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
+    overflow: hidden;
 }
 
 :root {
@@ -100,7 +101,7 @@ li {
 
 @media screen and (max-width :780px) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .nav-link {
         position: absolute;
