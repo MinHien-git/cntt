@@ -232,7 +232,7 @@ li {
 .main-about--,
 .grid-container--home,
 .main-team-- {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 @media (min-width: 45em) {
