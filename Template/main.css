@@ -166,10 +166,6 @@ li {
     justify-content: space-evenly;
 }
 
-.card {
-    min-width: 450px;
-}
-
 .btn {
     color: white;
     padding: 1.2rem;
