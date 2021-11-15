@@ -166,6 +166,10 @@ li {
     justify-content: space-evenly;
 }
 
+.card {
+    min-width: 450px;
+}
+
 .btn {
     color: white;
     padding: 1.2rem;
@@ -185,6 +189,11 @@ li {
 .main-about-- .card {
     max-width: 450px;
     max-height: 500px;
+    align-self: start;
+}
+
+.main-about-- {
+    gap: 1rem;
 }
 
 ul {
@@ -198,19 +207,16 @@ ul {
     place-content: center;
 }
 
+.main-about-->* {
+    margin: 0 auto;
+}
+
 .main-team-->*,
 .main-about-->* {
     background-color: white;
     height: clamp(20rem, 10vh + 1rem, 35rem);
     padding: 1rem;
     border-radius: 0.5rem;
-}
-
-.main-about-- {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-template-rows: minmax(500px, 1fr);
-    gap: 2rem;
-    padding: 2rem;
 }
 
 @media (min-width: 10em) {
@@ -224,6 +230,20 @@ ul {
     body {
         background: url(./bg.png) no-repeat center center fixed;
         background-size: cover;
+    }
+    .main-about-- {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .main-about-->*:first-child {
+        grid-column: 2;
+    }
+    .main-about-->*:last-child {
+        grid-column: 3;
+    }
+    .main-about-->* {
+        margin: 0;
     }
 }
 
