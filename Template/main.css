@@ -207,6 +207,10 @@ ul {
     margin: 0 auto;
 }
 
+.main-about-->.card {
+    min-width: 450px;
+}
+
 .main-team-->*,
 .main-about-->* {
     background-color: white;
