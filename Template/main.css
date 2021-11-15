@@ -183,7 +183,7 @@ li {
 }
 
 .main-about-- .card {
-    max-width: 450px;
+    max-width: 400px;
     max-height: 500px;
     align-self: start;
 }
@@ -208,7 +208,7 @@ ul {
 }
 
 .main-about-->.card {
-    min-width: 450px;
+    min-width: 400px;
 }
 
 .main-team-->*,
@@ -232,18 +232,9 @@ ul {
         background-size: cover;
     }
     .main-about-- {
-        display: flex;
+        display: grid;
         gap: 2rem;
         padding: 2rem;
-    }
-    .main-about-->*:first-child {
-        grid-column: 2;
-    }
-    .main-about-->*:last-child {
-        grid-column: 3;
-    }
-    .main-about-->* {
-        margin: 0;
     }
 }
 
